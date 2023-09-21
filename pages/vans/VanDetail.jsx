@@ -9,6 +9,8 @@ export default function VanDetail() {
     const { id } = useParams()
     const location = useLocation()
 
+
+
     React.useEffect(() => {
         async function loadVans() {
             setLoading(true)
@@ -24,6 +26,7 @@ export default function VanDetail() {
         loadVans()
     }, [id])
     
+    console.log(van)
     if (loading) {
         return <h1>Loading...</h1>
     }
